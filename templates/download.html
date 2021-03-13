@@ -55,22 +55,27 @@
       <p class="title">
         Music spleeter: Take Out
       </p>
-        <form method="POST" action="/getLink">
-          <h4> paste youtube link of music you want to split</h4>
-          <br>
-          <input type="text" name="link">
-          <button type="submit">muyaho!</button>
-        </form>
+         <div class="print">
+             {% if True %}
+                <img src = "{{thumb}}" , width="400", height="400">
+             {% endif %}
+             </br>
+             {{fileName}}
+             <h3>Click buttons below to download seperated wav files!</h3>
+             <form method="get" action="/vocal_download">
+              <button type="submit">vocal</button>
+            </form>
+            <form method="get" action="/bass_download">
+              <button type="submit">bass</button>
+            </form>
+            <form method="get" action="/drum_download">
+              <button type="submit">drum</button>
+            </form>
+            <form method="get" action="/others_download">
+              <button type="submit">others</button>
+            </form>
+          </div>
       <br>
-    <div>
-        <p>
-            {% if link == None %}
-                <h5> 아직 아무 링크도 입력이 안되었습니다. </h5>
-            {% else %}
-                <p>음원 분리 성공~!</br></p>
-            {% endif %}
-        </p>
-    </div>
     </div>
   </div>
 
